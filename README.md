@@ -1,2 +1,2 @@
 # namuAdblock
-byebye my pretty namuwiki ads
+[imgblock](https://cdn.jsdelivr.net/gh/cmanixli/namuAdblock/imgblock.user.js)
