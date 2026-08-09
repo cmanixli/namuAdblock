@@ -2,8 +2,8 @@
 // @name        namu.wiki adblock img
 // @namespace   https://github.com/cmanixli/namuAdblock
 // @homepageURL  https://github.com/cmanixli/namuAdblock
-// @updateURL    https://cdn.jsdelivr.net/gh/cmanixli/namuAdblock/dist/imgblock.user.js
-// @downloadURL  https://cdn.jsdelivr.net/gh/cmanixli/namuAdblock/dist/imgblock.user.js
+// @updateURL    https://cdn.jsdelivr.net/gh/cmanixli/namuAdblock/imgblock.user.js
+// @downloadURL  https://cdn.jsdelivr.net/gh/cmanixli/namuAdblock/imgblock.user.js
 // @icon        https://namu.wiki/favicon.svg
 // @version     0.1.0
 //
