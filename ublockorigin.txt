@@ -5,6 +5,9 @@
 ! Homepage: https://github.com/cmanixli/namuAdblock
 ! License: https://www.wtfpl.net/txt/copying/
 
-namu.wiki##table:has(a[href*="#s-11"])
 namu.wiki##table:has(img[src^="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iMTUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+"])
-
+!namu.wiki##table:has-text(/.naver.com|coupang.com|dothome.co.kr/)
+!파워링크 추출기같은거 해서 여기에 박아넣기?
+!'.com', '.net' 필터링할 경우 .com 문서 또는 .net(최상위 도메인) 문서에서 오류 발생
+!namu.wiki##table:has(a[href*="#s-11"])
+!왜 광고등록 아이콘에 #s-11 href를 박아놨을까?
