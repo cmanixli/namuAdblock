@@ -1,5 +1,10 @@
 ! Title: NamuAdblock Filters
+! Last modified: %timestamp%
 ! Expires: 1 days
+! Description: Filter namu.wiki ads in multiple ways
 ! Homepage: https://github.com/cmanixli/namuAdblock
-namu.wiki##table:has(img[src^="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iMTUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+"])
+! License: https://www.wtfpl.net/txt/copying/
+
 namu.wiki##table:has(a[href*="#s-11"])
+namu.wiki##table:has(img[src^="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iMTUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+"])
+
