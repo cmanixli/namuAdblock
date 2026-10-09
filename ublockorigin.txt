@@ -3,11 +3,25 @@
 ! Expires: 1 days
 ! Description: Filter namu.wiki ads in multiple ways
 ! Homepage: https://github.com/cmanixli/namuAdblock
-! License: https://www.wtfpl.net/txt/copying/
+! License: https://github.com/cmanixli/namuAdblock/blob/main/LICENSE.txt
 
-namu.wiki##table:has(img[src^="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iMTUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+"])
+namu.wiki##table:has(img[data-filesize^="398"])
+namu.wiki##table:has(img[src^="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iMTUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+"],img[src^="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+"],img[src^="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+"])
+!50x15 data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iMTUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+
+!30x16 data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+
+!64x64 data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+
+
+namu.wiki##table:has(img[src^="//i.namu.wiki/i/64r0kMvYV6XEg8WVCokkYcaqI7iU9iPiN4sEbozqUYE.png"],img[src^="//i.namu.wiki/i/64r0kMvYV6XEg8WVCokkYZ7Z_SI9xzcxdCsBei8rDEo.png"],img[src^="//i.namu.wiki/i/64r0kMvYV6XEg8WVCokkYTFgQ6oxyDcKFyW__JZyacI.png"])
+!slower than above
+namu.wiki##table:has(img:matches-attr("src"=/64r0kMvYV6XEg8WVCokkY.*/))
+!파워링크 "//i.namu.wiki/i/64r0kMvYV6XEg8WVCokkYcaqI7iU9iPiN4sEbozqUYE.png"
+!광고 "//i.namu.wiki/i/64r0kMvYV6XEg8WVCokkYZ7Z_SI9xzcxdCsBei8rDEo.png"
+!광고등록 "//i.namu.wiki/i/64r0kMvYV6XEg8WVCokkYTFgQ6oxyDcKFyW__JZyacI.png"
+!네이버 로그인 "//i.namu.wiki/i/64r0kMvYV6XEg8WVCokkYXW7MM6yUD8I-EyZzlu8Cjc.png"
+!네이버페이 "//i.namu.wiki/i/64r0kMvYV6XEg8WVCokkYXdLvzfEBNW-1tF0EyshqLE.png"
+
 !namu.wiki##table:has-text(/.naver.com|coupang.com|dothome.co.kr/)
-!파워링크 추출기같은거 해서 여기에 박아넣기?
+!자동화 전환 후 텍스트 추출,삽입
 !'.com', '.net' 필터링할 경우 .com 문서 또는 .net(최상위 도메인) 문서에서 오류 발생
 !namu.wiki##table:has(a[href*="#s-11"])
 !왜 광고등록 아이콘에 #s-11 href를 박아놨을까?
