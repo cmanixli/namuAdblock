@@ -3,7 +3,7 @@
 ## Ublock Origin
 Main
 ```
-https://codeberg.org/cmanixli/namuAdblock/src/branch/main/ublockorigin.txt
+https://codeberg.org/cmanixli/namuAdblock/raw/branch/main/ublockorigin.txt
 ```
 Mirror
 ```
