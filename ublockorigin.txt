@@ -5,15 +5,15 @@
 ! Homepage: https://codeberg.org/cmanixli/namuAdblock
 ! License: https://codeberg.org/cmanixli/namuAdblock/src/branch/main/LICENSE.txt
 
-namu.wiki##table:has(img[data-filesize^="398"])
-namu.wiki##table:has(img[src^="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iMTUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+"],img[src^="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+"],img[src^="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+"])
+namu.wiki##table:has(img[data-filesize^="398"]):remove()
+namu.wiki##table:has(img[src^="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iMTUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+"],img[src^="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+"],img[src^="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+"]):remove()
 !50x15 data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iMTUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+
 !30x16 data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+
 !64x64 data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+
 
-namu.wiki##table:has(img[src^="//i.namu.wiki/i/64r0kMvYV6XEg8WVCokkYcaqI7iU9iPiN4sEbozqUYE.png"],img[src^="//i.namu.wiki/i/64r0kMvYV6XEg8WVCokkYZ7Z_SI9xzcxdCsBei8rDEo.png"],img[src^="//i.namu.wiki/i/64r0kMvYV6XEg8WVCokkYTFgQ6oxyDcKFyW__JZyacI.png"])
+namu.wiki##table:has(img[src^="//i.namu.wiki/i/64r0kMvYV6XEg8WVCokkYcaqI7iU9iPiN4sEbozqUYE.png"],img[src^="//i.namu.wiki/i/64r0kMvYV6XEg8WVCokkYZ7Z_SI9xzcxdCsBei8rDEo.png"],img[src^="//i.namu.wiki/i/64r0kMvYV6XEg8WVCokkYTFgQ6oxyDcKFyW__JZyacI.png"]):remove()
 !slower than above
-namu.wiki##table:has(img:matches-attr("src"=/64r0kMvYV6XEg8WVCokkY.*/))
+namu.wiki##table:has(img:matches-attr("src"=/64r0kMvYV6XEg8WVCokkY.*/)):remove()
 !파워링크 "//i.namu.wiki/i/64r0kMvYV6XEg8WVCokkYcaqI7iU9iPiN4sEbozqUYE.png"
 !광고 "//i.namu.wiki/i/64r0kMvYV6XEg8WVCokkYZ7Z_SI9xzcxdCsBei8rDEo.png"
 !광고등록 "//i.namu.wiki/i/64r0kMvYV6XEg8WVCokkYTFgQ6oxyDcKFyW__JZyacI.png"
@@ -24,3 +24,9 @@ namu.wiki##table:has(img:matches-attr("src"=/64r0kMvYV6XEg8WVCokkY.*/))
 !자동화 전환 후 텍스트 추출,삽입
 !'.com', '.net' 필터링할 경우 .com 문서 또는 .net(최상위 도메인) 문서에서 오류 발생
 !namu.wiki##table:has(a[href*="#s-11"])
+
+! postprocessing ; 에서 절대 remove()를 쓰지마
+namu.wiki##div:has(> div:only-child > div:only-child > div > div > div > div:empty)
+namu.wiki##div:has(> div:only-child > div:only-child > div:only-child:empty)
+namu.wiki##div:has(> div:only-child > div:only-child:empty)
+!namu.wiki##div:empty ; 이거 지우면 문서 구조 찐빠남
