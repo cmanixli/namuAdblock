@@ -1,0 +1,6 @@
+arca.live##div:has(>div>div>a[href="/b/numor"]):remove()
+! /b/hotdeal
+arca.live##div:has(>div>div>span>span>span:has-text(광고)):remove()
+!arca.live##div:has(>div>div>span>span>a:not(:has-text(SW/게임))):remove()
+!arca.live##div:has(>div>div>span>span>span:has-text(오늘의집)):remove()
+!arca.live##div:has(>div>div>span>span>span:has-text(쿠팡와우)):remove()
