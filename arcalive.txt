@@ -1,6 +1,24 @@
+! 홈페이지 유머채널 제거
+arca.live##div.summary-item-wrap:has(>div>a[href="/b/numor"]):remove()
+! 홈페이지 핫딜 채널 글 목록 제거
+arca.live##div.link-list>a[href^="/b/hotdeal/"]
+! 유저 광고 제거
+arca.live##a:has(>div>div>span>b:has-text(광고))
+! 아카라이브 공지 제거
+arca.live##a.notice-service:has(>div>div>span>b:has-text(공지))
+
+! 모든 공지 제거
+arca.live##a.notice
+
+! 핫딜, 유머 챈 동시 제거 ( 레이아웃 바뀌면 터짐 )
 arca.live##div:has(>div>div>a[href="/b/numor"]):remove()
-! /b/hotdeal
+
+! 핫딜챈 공식 광고 제거
 arca.live##div:has(>div>div>span>span>span:has-text(광고)):remove()
-!arca.live##div:has(>div>div>span>span>a:not(:has-text(SW/게임))):remove()
-!arca.live##div:has(>div>div>span>span>span:has-text(오늘의집)):remove()
-!arca.live##div:has(>div>div>span>span>span:has-text(쿠팡와우)):remove()
+
+! 핫딜챈 원하는 태그 제거
+arca.live##div:has(>div>div>span>span>span:has-text(오늘의집)):remove()
+arca.live##div:has(>div>div>span>span>span:has-text(쿠팡와우)):remove()
+
+! 핫딜챈 SW/게임 태그 아니면 제거
+arca.live##div:has(>div>div>span>span>a:not(:has-text(SW/게임))):remove()
